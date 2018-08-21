@@ -12,7 +12,7 @@ but there seem to be some issue on GPU usage on flask multi process usage .
 
 So it is not able to dynamic load model after web app is running, you have to load it first and start the process.
 
-
+## Not all quare Image
 
 
 

@@ -34,5 +34,17 @@ But, you can write parser to load your data into `(x_train, y_train), (x_test, y
 
 css file in the `assets` directory will automatic add to web , load the stylesheet and add className into html code
 
+## How to add javascript file into dash?
+
+`grasia_dash_components` have some extend component for dash , please install it first.  
+Then,  in the python you can use import component as below code.
+
+```python
+import grasia_dash_components as gdc
+
+# add the conponent into html block
+gdc.Import(src="./assets/test.js")
+```
+
 
 
