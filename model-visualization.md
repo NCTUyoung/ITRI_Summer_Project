@@ -8,11 +8,23 @@ description: >-
 
 ## Getting Start
 
+### Install the library needed.
+
+| Library | Link |
+| :--- | :--- |
+| Anaconda | [https://anaconda.org/](https://anaconda.org/) |
+| plotly | pip install plotly [https://plot.ly/python/getting-started/](https://plot.ly/python/getting-started/) |
+| Plotly dash | pip install dash==0.24.1 \# The core dash backend pip install dash-renderer==0.13.0 \# The dash front-end pip install dash-html-components==0.11.0 \# HTML components pip install dash-core-components==0.27.1 \# Supercharged components pip install plotly --upgrade \# Plotly graphing library used in examples [https://dash.plot.ly/installation](https://dash.plot.ly/installation) |
+| Dash plugin | pip install dash-table-experiments[https://github.com/plotly/dash-table-experiments](https://github.com/plotly/dash-table-experiments) pip install dash-dangerously-set-inner-html [https://github.com/plotly/dash-dangerously-set-inner-html](https://github.com/plotly/dash-dangerously-set-inner-html) pip install grasia-dash-components [https://github.com/Grasia/grasia-dash-components](https://github.com/Grasia/grasia-dash-components) |
+| Tensorflow | 1.9 version |
+
+### Run Web Server
+
 This is a web based application , type this command and see the result on browser.
 
 ```
 $ cd project-dir
-$ python3 <./model/mnist.h5> <mnist>
+$ python3 index.py <./model/mnist.h5> <mnist>
 
 open your browser on localhost:8050
 ```

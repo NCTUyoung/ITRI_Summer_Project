@@ -26,6 +26,15 @@ description: Here you will know how to modify the tool to meet your need
 
 Because this is a compact visualization tool , many python is being included.Mostly, they are install in the anaconda package.
 
+| Library | Usage |
+| :--- | :--- |
+| plotly | Main plot library with interactive plot |
+| dash | Web app framework for plotly |
+| dash\_dangerously\_set\_inner\_html | Dash’s plugin for template rendering |
+| grasia\_dash\_components | Dash’s plugin for import external js file |
+| dash\_table\_experiments | Dash’s plugin for interactive data table |
+| tensorflow | Deep learning framework |
+
 ```python
 # Tensorflow and keras library
 #-----
@@ -79,6 +88,15 @@ num_classes=10
 ### Dataset preload
 
 In order to enhance web user experience, preload the model,dataset,feature vector is needed.Some of them are turn into pandas dataframe in the benefit of index tracing.
+
+| Variable | Explain |
+| :--- | :--- |
+| \(x\_train, y\_train\), \(x\_test, y\_test\) | Preload dataset |
+| model, model\_extractfeatures | Preload user model |
+| y\_pred, result, loss\_matrix, fc2\_features | Forward result |
+| X\_original, X\_embedded, pca\_features | Projection result |
+| df\_global, df\_result, df\_predict | Global pandas dataframe |
+| loss\_matrix\_light | Matrix use to represent loss alpha color |
 
 ```python
 # import dataset-----
@@ -548,7 +566,14 @@ layout2 = html.Div([
 
 callback define the communication between the html and our python backend.  
 [https://dash.plot.ly/getting-started-part-2](https://dash.plot.ly/getting-started-part-2)  
-It is worth mention that I use BASE-64 string to render image to frontend. Helper function in util.py`convert_base64` is available to convert numpy array\(float32\) to base64 string.
+It is worth mention that I use BASE-64 string to render image to frontend. Helper function in util.py`convert_base64` is available to convert numpy array\(float32\) to base64 string.  
+Global variable or Hidden dom are use here to communicate between different component.
+
+#### Example, How to bulid 【click and show 】
+
+1. Registered Click event on plotly graph
+2. Click event occur , record information into hidden html Dom or global variable
+3. Register change event on hidden Dom, when change occur show click data point.
 
 ```python
 # Callback ------------------------------------------
@@ -687,6 +712,15 @@ def update_query_image_pool(index_list):
         buf.close()
         return 'data:image/JPEG;base64,{}'.format(util.convert_base64(im/255.0))
 ```
+
+## Development Environment Setup
+
+I recommend  use jupyter notebook as IDE.  
+You can stop the process, change the html code any time,and resume process.  
+This would be like hot reload development.  
+`main.ipynb` is file I develop this app.
+
+
 
 
 

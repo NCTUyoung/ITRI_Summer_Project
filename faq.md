@@ -4,7 +4,7 @@ description: Some frequently question and useful tip are collect here
 
 # FAQ
 
-### HTML template support 
+## HTML template support 
 
 Dash do not official support template rendering.To use template, you need to install`dash_dangerously_set_inner_html`
 
@@ -44,6 +44,26 @@ import grasia_dash_components as gdc
 
 # add the conponent into html block
 gdc.Import(src="./assets/test.js")
+```
+
+## How to show numpy array to dash web app?
+
+1. First you need to turn array into base64 string.
+2. Send the template string to `Img` tag
+
+```python
+html.Img(src='data:image/png;base64,{}'.format(data_string),style={'width':'150px'}),
+```
+
+If it is a matplot image, save them into buffer,and repeat \(1\)\(2\).
+
+```python
+plt.plot(pca_features[i],linewidth=7.0)
+buf = io.BytesIO()
+plt.savefig(buf, format='JPEG')
+buf.seek(0)
+im_wave = np.array(Image.open(buf))
+im_wave = util.convert_base64(im_wave/255.0) 
 ```
 
 
