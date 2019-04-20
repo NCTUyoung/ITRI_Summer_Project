@@ -10,15 +10,60 @@ description: >-
 
 ### Install the library needed.
 
-| Library | Link |
-| :--- | :--- |
-| Anaconda | [https://anaconda.org/](https://anaconda.org/) |
-| plotly | pip install plotly [https://plot.ly/python/getting-started/](https://plot.ly/python/getting-started/) |
-| Plotly dash | pip install dash==0.24.1 \# The core dash backend pip install dash-renderer==0.13.0 \# The dash front-end pip install dash-html-components==0.11.0 \# HTML components pip install dash-core-components==0.27.1 \# Supercharged components pip install plotly --upgrade \# Plotly graphing library used in examples [https://dash.plot.ly/installation](https://dash.plot.ly/installation) |
-| Dash plugin | pip install dash-table-experiments[https://github.com/plotly/dash-table-experiments](https://github.com/plotly/dash-table-experiments) pip install dash-dangerously-set-inner-html [https://github.com/plotly/dash-dangerously-set-inner-html](https://github.com/plotly/dash-dangerously-set-inner-html) pip install grasia-dash-components [https://github.com/Grasia/grasia-dash-components](https://github.com/Grasia/grasia-dash-components) |
-| Tensorflow | 1.9 version |
-
-### Run Web Server
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Library</th>
+      <th style="text-align:left">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Anaconda</td>
+      <td style="text-align:left"><a href="https://anaconda.org/">https://anaconda.org/</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">plotly</td>
+      <td style="text-align:left">
+        <p>pip install plotly</p>
+        <p><a href="https://plot.ly/python/getting-started/">https://plot.ly/python/getting-started/</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Plotly dash</td>
+      <td style="text-align:left">
+        <p>pip install dash==0.24.1 # The core dash backend</p>
+        <p>pip install dash-renderer==0.13.0 # The dash front-end</p>
+        <p>pip install dash-html-components==0.11.0 # HTML components</p>
+        <p>pip install dash-core-components==0.27.1 # Supercharged components</p>
+        <p>pip install plotly --upgrade # Plotly graphing library used in examples
+          <a
+          href="https://dash.plot.ly/installation">https://dash.plot.ly/installation</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Dash plugin</td>
+      <td style="text-align:left">
+        <p>pip install dash-table-experiments</p>
+        <p><a href="https://github.com/plotly/dash-table-experiments">https://github.com/plotly/dash-table-experiments</a> 
+        </p>
+        <p>pip install dash-dangerously-set-inner-html</p>
+        <p><a href="https://github.com/plotly/dash-dangerously-set-inner-html">https://github.com/plotly/dash-dangerously-set-inner-html</a> 
+        </p>
+        <p>pip install grasia-dash-components</p>
+        <p><a href="https://github.com/Grasia/grasia-dash-components">https://github.com/Grasia/grasia-dash-components</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Tensorflow</td>
+      <td style="text-align:left">1.9 version</td>
+    </tr>
+  </tbody>
+</table>### Run Web Server
 
 This is a web based application , type this command and see the result on browser.
 
@@ -39,6 +84,16 @@ If you load a very large model that is high GPU usage, remember to change GPU us
 `restrict_gpu_mem(`fraction=1`)`
 {% endhint %}
 
+## Task and Dataset
+
+| title |  |
+| :--- | :--- |
+| Task | CNN classification problem |
+| Datasets | MNIST/Cifar10 |
+| Train flow | Pretrained model needed to be analyze |
+| Input | Static model and dataset |
+| Evaluate | Accuracy and Loss |
+
 ## Overview
 
 The tool provide a simple but overall visualization.You can see the strongly connection between data and the model.
@@ -47,7 +102,7 @@ The tool provide a simple but overall visualization.You can see the strongly con
 
 First, you can see the structure of the model and the dataset. 
 
-![Preview of model](.gitbook/assets/image%20%281%29.png)
+![Preview of model](.gitbook/assets/image%20%282%29.png)
 
 ### Data Projection View
 
@@ -79,7 +134,7 @@ Simple filter has been set up, query command can be type into the area,and resul
 
 ![Loss Dataframe for data analysis](.gitbook/assets/dataframe.gif)
 
-![Image Show Pool bind with loss dataframe](.gitbook/assets/image%20%283%29.png)
+![Image Show Pool bind with loss dataframe](.gitbook/assets/image%20%284%29.png)
 
 {% hint style="info" %}
 For more type command used in loss dataframe , please check out [https://github.com/plotly/dash-table-experiments](https://github.com/plotly/dash-table-experiments)
@@ -112,5 +167,7 @@ Using this tool , user can find problems in their dataset.
 
 ![Hard example query\(interactive\)](.gitbook/assets/query.gif)
 
+## Demo Video
 
+{% embed url="https://youtu.be/YMjx8yTO1nI" %}
 
